@@ -1,8 +1,7 @@
 # Thai Baht Text TS
 
-[![NPM Download](https://img.shields.io/npm/dt/thai-baht-text.svg?style=flat-square)](https://www.npmjs.com/package/thai-baht-text-ts)
-[![NPM Version](https://img.shields.io/npm/v/thai-baht-text.svg?style=flat-square)](https://www.npmjs.com/package/thai-baht-text-ts)
-[![license-svg](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://opensource.org/licenses/MIT)
+[![NPM Version](https://img.shields.io/npm/v/thai-baht-text-ts)](https://www.npmjs.com/package/thai-baht-text-ts)
+[![license](https://img.shields.io/npm/l/thai-baht-text-ts)](https://opensource.org/licenses/MIT)
 
 [Installation](https://github.com/pthongtaem/thai-baht-text-ts#installation) | [Usage](https://github.com/pthongtaem/thai-baht-text-ts#usage)
 
