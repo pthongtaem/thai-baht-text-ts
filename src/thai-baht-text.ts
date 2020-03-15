@@ -30,11 +30,7 @@ const isLastPosition = (position: number, lengthOfDigits: number): boolean =>
   position + 1 < lengthOfDigits;
 
 const reverseNumber = (number: string): string => {
-  const numberStr = number.toString();
-  return numberStr
-    .split('')
-    .reverse()
-    .join('');
+  return [...number].reverse().join('');
 };
 
 const getBathUnit = (position: number, number: number): string => {
@@ -93,38 +89,45 @@ const getBathText = (
   return numberText;
 };
 
-// convert function without async
 const convert = (numberInput: string): string => {
   const numberReverse = reverseNumber(numberInput);
-  let textOutput = '';
-  // console.log('>', numberReverse.split(''))
-  numberReverse.split('').forEach((number: string, i: number): void => {
-    textOutput = `${getBathText(
-      i,
-      parseFloat(number),
-      numberReverse.length,
-    )}${getBathUnit(i, parseFloat(number))}${textOutput}`;
-  });
+
+  const textOutput = numberReverse
+    .split('')
+    .reduce((pre: string, number: string, i: number) => {
+      return `${getBathText(
+        i,
+        parseFloat(number),
+        numberReverse.length,
+      )}${getBathUnit(i, parseFloat(number))}${pre}`;
+    }, '');
+
   return textOutput;
 };
 
-const parseFloatWithPrecision = (number: number, precision = 2): string => {
+const parseFloatWithPrecision = (
+  number: number,
+  precision = 2,
+): [string, string] => {
   const numberFloatStr = number.toString().split('.');
   const integerUnitStr = numberFloatStr[0];
   const fractionalUnitStr =
     numberFloatStr.length == 2
       ? numberFloatStr[1].substring(0, precision)
       : '00';
-  return parseFloat(`${integerUnitStr}.${fractionalUnitStr}`).toFixed(
-    precision,
-  );
+
+  const numberInput = parseFloat(
+    `${integerUnitStr}.${fractionalUnitStr}`,
+  ).toFixed(precision);
+
+  return [getIntegerDigits(numberInput), getFractionalDigits(numberInput)];
 };
 
 export const ThaiBaht = (numberInput: number): string => {
   const numberStr = parseFloatWithPrecision(numberInput);
 
-  const integerDigits = getIntegerDigits(numberStr);
-  const fractionalDigits = getFractionalDigits(numberStr);
+  const integerDigits = numberStr[0];
+  const fractionalDigits = numberStr[1];
 
   const intTextOutput = convert(integerDigits);
   const textOutput = [];
