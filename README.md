@@ -13,11 +13,11 @@ ___
 ## Installation
 #### วิธีติดตั้ง
 ```bash
-npm install thai-baht-text async --save
+npm install thai-baht-text-ts --save
 ```
 ##### or
 ```bash
-yarn add thai-baht-text async
+yarn add thai-baht-text-ts
 ```
 
 ## Usage
@@ -26,17 +26,17 @@ yarn add thai-baht-text async
 #### Javascript ES5
 
 ```javascript
-const THBText = require('thai-baht-text') // for ES5
+const { ThaiBaht } = require('thai-baht-text-ts') // for ES5
 
 let money = 10050
-let moneyText = THBText(money)
+let moneyText = ThaiBaht(money)
 
 console.log(moneyText)
 // OUTPUT: หนึ่งหมื่นห้าสิบบาทถ้วน
 
 money = 12345678988888.50
 
-console.log(THBText(money))
+console.log(ThaiBaht(money))
 // OUTPUT: สิบสองล้านล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดล้านเก้าแสนแปดหมื่นแปดพันแปดร้อยแปดสิบแปดบาทห้าสิบสตางค์
 ```
 #### More infomation [ES5 Example](https://github.com/pthongtaem/thai-baht-text-ts/blob/master/example/example_es5.js)
@@ -45,23 +45,21 @@ ___
 #### Javascript ES6
 
 ```javascript
-import THBText from 'thai-baht-text' // for ES6
+import { ThaiBaht } from 'thai-baht-text-ts' // for ES6
 
 let money = 10050
-let moneyText = THBText(money)
+let moneyText = ThaiBaht(money)
 
 console.log(moneyText)
 // OUTPUT: หนึ่งหมื่นห้าสิบบาทถ้วน
 
 money = 12345678988888.50
 
-console.log(THBText(money))
+console.log(ThaiBaht(money))
 // OUTPUT: สิบสองล้านล้านสามแสนสี่หมื่นห้าพันหกร้อยเจ็ดสิบแปดล้านเก้าแสนแปดหมื่นแปดพันแปดร้อยแปดสิบแปดบาทห้าสิบสตางค์
 ```
 #### More infomation [ES6 Example](https://github.com/pthongtaem/thai-baht-text-ts/blob/master/example/example_es6.js)
 
-
-#### More infomation [Browser version (UMD)](https://github.com/pthongtaem/thai-baht-text-ts/blob/master/example/example_umd.js)
 
 #### **CAUTION!**
 
@@ -74,7 +72,7 @@ that is MAX_SAFE_INTEGER of javascript.
 ซึ่งเป็น MAX_SAFE_INTEGER ของ javascript
 ___
 ## License
-The Thai-Baht-Text JS is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+The Thai-Baht-Text-TS is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
 
 ## Ending message
 If you found bugs or some missing point, please send pull request back or open an issue.
