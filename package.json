@@ -2,13 +2,9 @@
   "name": "thai-baht-text-ts",
   "version": "1.0.4",
   "description": "Convert number to Thai Bath as Text",
-  "source": "src/thai-baht-text.ts",
   "main": "dist/thai-baht-text.js",
-  "umd:main": "dist/thai-baht-text.umd.js",
-  "module": "dist/thai-baht-text.mjs",
-  "types": "dist/thai-baht-text.d.ts",
   "scripts": {
-    "build": "microbundle",
+    "build": "tsc",
     "test": "jest"
   },
   "repository": {
@@ -35,16 +31,17 @@
   },
   "homepage": "https://github.com/pthongtaem/thai-baht-text-ts#readme",
   "dependencies": {
-    "@types/jest": "^25.2.1",
-    "jest": "^25.4.0",
-    "ts-jest": "^25.4.0"
+    "@types/jest": "^25.2.3",
+    "jest": "^26.0.1",
+    "ts-jest": "^26.0.0"
   },
   "devDependencies": {
-    "@types/node": "^13.13.2",
-    "@typescript-eslint/eslint-plugin": "^2.29.0",
-    "@typescript-eslint/parser": "^2.29.0",
-    "eslint": "^6.8.0",
-    "microbundle": "^0.11.0",
-    "typescript": "^3.8.3"
+    "@types/node": "^14.0.4",
+    "@typescript-eslint/eslint-plugin": "^2.34.0",
+    "@typescript-eslint/parser": "^2.34.0",
+    "eslint": "^7.0.0",
+    "microbundle": "^0.12.0",
+    "ts-node": "^8.10.1",
+    "typescript": "^3.9.3"
   }
 }
