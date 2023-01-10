@@ -1,5 +1,6 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.ThaiBaht = void 0;
 const MAX_POSITION = 6;
 const UNIT_POSITION = 0;
 const TEN_POSITION = 1;
@@ -73,7 +74,7 @@ const parseFloatWithPrecision = (number, precision = 2) => {
     const numberInput = parseFloat(`${integerUnitStr}.${fractionalUnitStr}`).toFixed(precision);
     return [getIntegerDigits(numberInput), getFractionalDigits(numberInput)];
 };
-exports.ThaiBaht = (numberInput) => {
+const ThaiBaht = (numberInput) => {
     const numberStr = parseFloatWithPrecision(numberInput);
     const integerDigits = numberStr[0];
     const fractionalDigits = numberStr[1];
@@ -90,4 +91,5 @@ exports.ThaiBaht = (numberInput) => {
     }
     return textOutput.join('');
 };
+exports.ThaiBaht = ThaiBaht;
 //# sourceMappingURL=thai-baht-text.js.map
